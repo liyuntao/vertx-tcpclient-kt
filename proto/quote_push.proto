@@ -1,0 +1,39 @@
+syntax = "proto2";
+package quote_push;
+
+option java_package = "quote.model";
+
+message Data
+{
+    optional uint32 data_type    = 1;
+    optional int32 ret_code      = 2;
+    optional string ret_msg      = 3;
+
+    optional LoginReq login_req  = 20;
+    optional LoginRsp login_rsp  = 21;
+    optional HeartBeat heart_beat = 26;
+}
+
+message LoginReq
+{
+    optional string user     = 1;
+    optional string password = 2;
+}
+
+message LoginRsp
+{
+    optional int32  ret_code  = 1;
+    optional string ret_msg   = 2;
+}
+
+message HeartBeat
+{
+    optional uint64 time = 1;
+}
+
+enum QuoteType
+{
+    QUOTE_TYPE_PUSH_LOGIN_REQ               = 300;
+    QUOTE_TYPE_PUSH_LOGIN_RSP               = 301;
+    QUOTE_TYPE_PUSH_HEARTBEAT               = 306;
+};
