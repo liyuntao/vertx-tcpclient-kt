@@ -123,7 +123,7 @@
                     <!-- pb源文件目录 -->
                     <protoSourceRoot>proto</protoSourceRoot>
                     <!-- pb生成对象输出目录 -->
-                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
+                    <outputDirectory>${basedir}/src/main/kotlin</outputDirectory>
                     <clearOutputDirectory>false</clearOutputDirectory>
                 </configuration>
                 <executions>
